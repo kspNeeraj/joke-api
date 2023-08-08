@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <title>JOKE api</title>
+
 </head>
 <body>
-    <h1>hello world</h1>
+    
+    <section class="api-body">
+        <div class="api-container">
+            <% if(locals.Response) {%>
+                <h1><%= Response.setup %></h1>
+                <h1><%= Response.delivery %> </h1>
+                <% }else { %>
+                <h1>welcome to joke API</h1>
+                <% } %>
+                <button><a href="/getJoke">get the joke</a></button>
+        </div>
+    </section>
 </body>
 </html>
